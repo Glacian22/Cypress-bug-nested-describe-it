@@ -1,6 +1,9 @@
 /// <reference types="cypress" />
 describe('page', () => {
-  it('works', () => {
+  it('hangs after completing', () => {
+    describe('nested in an it', () => {
+      it('super nested', () => {})
+    })
     cy.visit('https://example.cypress.io')
   })
 })
